@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/2020/01/14/git-usefully-command/</loc>
+    
+    <lastmod>2020-01-15T08:53:44.109Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/2020/01/14/java-dubbo-start/</loc>
     
     <lastmod>2020-01-14T02:04:28.128Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>/2020/01/14/jvm-jre-jdk/</loc>
     
     <lastmod>2020-01-14T01:57:36.664Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/2020/01/14/git-usefully-command/</loc>
-    
-    <lastmod>2020-01-14T01:57:36.648Z</lastmod>
     
   </url>
   
