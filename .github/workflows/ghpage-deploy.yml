@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: node:20  # 使用 Node.js 18 的官方 Docker 镜像
+      image: node:20.14.0  # 使用 Node.js 18 的官方 Docker 镜像
 
     steps:
       # Step 1: 检出代码
