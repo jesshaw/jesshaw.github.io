@@ -1,0 +1,43 @@
+name: Deploy to GitHub Pages using Docker
+
+on:
+  push:
+    branches:
+      - main  # 监听 main 分支上的 push 事件
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    container:
+      image: node:20  # 使用 Node.js 18 的官方 Docker 镜像
+
+    steps:
+      # Step 1: 检出代码
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: 设置 Git 配置（用于提交 gh-pages 分支）
+      - name: Setup Git
+        run: |
+          git config --global user.name "jesshaw"
+          git config --global user.email "jesshaw@126.com"
+
+      # Step 3: 安装项目依赖
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: 运行构建脚本（假设项目配置了 "build" 脚本）
+      - name: Build project
+        run: npm run build  # 确保你的项目有 "build" 脚本，例如生成到 dist 文件夹
+
+      # Step 5: 列出构建输出目录内容，确保构建正确
+      - name: List build directory
+        run: ls -al ./dist  # 根据实际构建的输出路径修改
+
+      # Step 6: 部署到 GitHub Pages
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist  # 指定构建输出的静态文件目录

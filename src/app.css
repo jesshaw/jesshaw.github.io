@@ -1,0 +1,169 @@
+@import "primeicons/primeicons.css";
+/* @layer primereact; */
+@layer lxm-base,lxm-componets,lxm-utilities;
+
+@layer lxm-base {
+  @tailwind base;
+}
+
+@layer lxm-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+html,
+body {
+  @apply m-0 min-h-full p-0;
+}
+
+#root {
+  @apply relative;
+}
+
+#header {
+  @apply px-6 mx-0 pt-8 pb-12 md:px-16 lg:pt-8 lg:pb-12 lg:px-20 lg:mx-20 z-10;
+}
+
+.brand-icon > a {
+  @apply flex text-center gap-1 items-center text-2xl font-bold;
+}
+
+.brand-icon > a svg {
+  @apply w-14 fill-lxm-primary;
+}
+
+.custom-menubar {
+  @apply w-full border-0 bg-transparent z-50;
+}
+
+.custom-menubar .p-menubar-button {
+  @apply ml-auto w-6 h-6;
+}
+
+.custom-menubar .p-menubar-button:hover {
+  @apply bg-transparent;
+}
+
+.custom-menubar .p-menubar-button:focus {
+  @apply shadow-none;
+}
+
+.custom-menubar .p-menubar-button svg {
+  @apply w-6 h-6;
+}
+
+.custom-menubar .p-menubar-root-list {
+  @apply ml-auto;
+}
+
+.custom-menubar .p-menubar-end {
+  @apply hidden;
+}
+
+.content-wrapper > div {
+  @apply px-6 mx-0 py-12 md:px-16 lg:py-12 lg:px-20 lg:mx-20;
+}
+
+.bg {
+  @apply fixed overflow-hidden w-full h-full -z-10  bg-lxm-surface;
+}
+
+.bg-circle {
+  @apply w-[1000px] h-[1000px] opacity-25 -z-50 fixed rounded-full bg-gradient-to-r from-lxm-primary to-lxm-surface;
+}
+.bg-circle-left {
+  @apply -top-[200px] rotate-[40deg] -left-[700px];
+}
+
+.bg-circle-right {
+  @apply top-[50px] -right-[800px] rotate-[140deg];
+}
+
+#home {
+  @apply grid grid-cols-12 items-center justify-between gap-4 mb-20;
+}
+
+#home > div:first-child {
+  @apply col-span-12 md:col-span-4 flex flex-col gap-4;
+}
+#home > div:last-child {
+  @apply col-span-12 md:col-span-7 md:col-start-6;
+}
+
+#services > div > div {
+  @apply grid grid-cols-12;
+}
+
+#services > div > div > div {
+  @apply col-span-12 md:col-span-6 xl:col-span-4 flex justify-center p-3;
+}
+
+#services > div > div > div > div {
+  @apply box-border rounded shadow bg-lxm-surface-card border p-4 w-full;
+}
+
+.case-wrapper {
+  @apply grid grid-cols-12 gap-3;
+}
+
+.case-wrapper > div {
+  @apply animate-zoom-in lg:col-span-3 md:col-span-6 col-span-12 shadow-lg p-1 transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-110;
+}
+
+.case-wrapper a {
+  @apply flex flex-col no-underline;
+}
+
+.case-wrapper a > img {
+  @apply object-cover object-left-top w-full h-52;
+}
+
+.case-wrapper a > div {
+  @apply p-2 bg-lxm-primary text-white w-full;
+}
+
+.case-wrapper a > div > h4 {
+  @apply my-1;
+}
+
+#about {
+  @apply grid grid-cols-12 items-center justify-between gap-4 mb-20;
+}
+
+#about img {
+  @apply rounded shadow;
+}
+
+#about > div:first-child {
+  @apply col-span-12 md:col-span-4 flex flex-col gap-4;
+}
+#about > div:last-child {
+  @apply col-span-12 md:col-span-7 md:col-start-6;
+}
+
+#scrollToTop {
+  @apply fixed right-2 top-3/4 animate-fade-in;
+}
+
+#footer {
+  @apply grid grid-cols-12 py-6;
+}
+
+#footer > div:first-child {
+  @apply col-span-12 md:col-span-2;
+}
+
+#footer > div:first-child > a {
+  @apply w-36;
+}
+
+#footer > div:last-child {
+  @apply col-span-12 md:col-start-4 md:col-span-9 lg:col-span-7 lg:col-start-6 justify-center;
+}
+
+#footer > div:last-child > div {
+  @apply grid grid-cols-12 text-left;
+}
+#footer > div:last-child > div > div {
+  @apply col-span-6 md:col-span-3;
+}
