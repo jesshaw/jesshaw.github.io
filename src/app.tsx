@@ -71,8 +71,10 @@ function App() {
           icon: "pi pi-palette",
           items: [
             {
-              label: "CRM",
+              label: "企业官网",
               icon: "pi pi-palette",
+              badge: 3,
+              template: itemRenderer,
               command: () => {
                 scrollToTarget("cases");
                 setTimeout(() => {
@@ -81,10 +83,14 @@ function App() {
               },
             },
             {
-              label: "Ultima",
+              label: "CRM",
               icon: "pi pi-palette",
-              badge: 3,
-              template: itemRenderer,
+              command: () => {
+                scrollToTarget("cases");
+                setTimeout(() => {
+                  setActiveIndex(1);
+                }, 500);
+              },
             },
           ],
         },
