@@ -83,7 +83,7 @@ function App() {
               },
             },
             {
-              label: "CRM",
+              label: "乐享喵CRM",
               icon: "pi pi-palette",
               command: () => {
                 scrollToTarget("cases");
@@ -223,7 +223,7 @@ function App() {
                   <div>
                     <div>
                       <Button
-                        icon="pi pi-bookmark"
+                        icon="pi pi-objects-column"
                         rounded
                         severity="success"
                         aria-label="Bookmark"
@@ -235,7 +235,7 @@ function App() {
 <Button icon="pi pi-heart" rounded severity="help" aria-label="Favorite" />
 <Button icon="pi pi-times" rounded severity="danger" aria-label="Cancel" /> */}
                       <span className="text-900 block font-semibold mb-4 text-lg">
-                        系统研发
+                        系统集成
                       </span>
                       <p className="m-0 text-secondary text-700">
                         在已有的用户管理子系统、权限管理子系统、日志管理子系统的功能之上，进行二次定制化开发。系统灵活可扩展，界面友好。
@@ -245,14 +245,14 @@ function App() {
                   <div>
                     <div>
                       <Button
-                        icon="pi pi-user"
+                        icon="pi pi-sitemap"
                         rounded
                         severity="info"
                         aria-label="User"
                         className="mb-4 block"
                       />
                       <span className="text-900 block font-semibold mb-4 text-lg">
-                        网站设计
+                        企业官网设计
                       </span>
                       <p className="m-0 text-secondary text-700">
                         主要提供一站式的网站设计服务，一套站点多端适配，支持手机、小程序，微信公众号、Pad和PC端友好展示。
@@ -262,7 +262,7 @@ function App() {
                   <div>
                     <div>
                       <Button
-                        icon="pi pi-bell"
+                        icon="pi pi-check-circle"
                         rounded
                         severity="warning"
                         aria-label="Notification"
@@ -280,7 +280,7 @@ function App() {
                     <div>
                       <Button
                         className="mb-4 block"
-                        icon="pi pi-heart"
+                        icon="pi pi-graduation-cap"
                         rounded
                         severity="help"
                         aria-label="Favorite"
@@ -297,7 +297,7 @@ function App() {
                     <div>
                       <Button
                         className="mb-4 block"
-                        icon="pi pi-times"
+                        icon="pi pi-database"
                         rounded
                         severity="danger"
                         aria-label="Cancel"
@@ -306,7 +306,7 @@ function App() {
                         数据收集
                       </span>
                       <p className="m-0 text-secondary text-700">
-                        若您有大量数据需要从互联网定期收集，我们提供在线云平台帮你实现快速批量收集数据的功能。
+                        若您有大量公用数据需要从互联网定期收集，我们提供在线云平台帮你实现快速批量收集数据的功能。
                       </p>
                     </div>
                   </div>
@@ -314,7 +314,7 @@ function App() {
                     <div>
                       <Button
                         className="mb-4 block"
-                        icon="pi pi-check"
+                        icon="pi pi-tags"
                         rounded
                         severity="secondary"
                         aria-label="Filter"
@@ -323,7 +323,8 @@ function App() {
                         推荐系统设计
                       </span>
                       <p className="m-0 text-secondary text-700">
-                        基于ES及大数据做实时推荐系统，实时展示业务数据，为您的业务提供决策依据。
+                        基于Elastic Search或Open
+                        Search及大数据做实时推荐系统，实时展示业务数据，为您的业务提供决策依据。
                       </p>
                     </div>
                   </div>
@@ -345,21 +346,26 @@ function App() {
                   <TabPanel header="APP">
                     <div className="case-wrapper">
                       <div>
-                        <a href="">
-                          <img src="images/portfolio/app1.jpg" alt="" />
+                        <a
+                          href="https://org.modao.cc/app/8765c832d43cecb58b22fdbefdbdf8358f25a97e?simulator_type=device&amp;sticky=#screen=sk8sjxl7nrly9vg"
+                          target="_blank"
+                        >
+                          <img src="images/portfolio/app-prd.png" alt="" />
                           <div className="details">
-                            <h4>App 1</h4>
-                            <span>Alored dono par</span>
+                            <h4>天力拍卖</h4>
+                            <span>天力APP在线演示（PRD）</span>
                           </div>
                         </a>
                       </div>
-
-                      <div>
-                        <a href="">
-                          <img src="images/portfolio/app2.jpg" alt="" />
+                      <div className="lg:col-span-3 md:col-span-6 col-span-12 portfolio-item filter-web">
+                        <a
+                          href="https://lexiangmiao.com/reservation_room_app"
+                          target="_blank"
+                        >
+                          <img src="images/portfolio/hotel-reservation-app.png" alt="" />
                           <div className="details">
-                            <h4>App 2</h4>
-                            <span>Alored dono par</span>
+                            <h4>垂直连锁酒店APP</h4>
+                            <span>在线演示简单版（flutter web版）</span>
                           </div>
                         </a>
                       </div>
@@ -367,42 +373,41 @@ function App() {
                   </TabPanel>
                   <TabPanel header="企业信息化">
                     <div className="case-wrapper">
-                      <div className="lg:col-span-3 md:col-span-6 col-span-12 portfolio-item filter-web">
-                        <a href="http://49.235.132.153:8080" target="_blank">
-                          <img src="images/portfolio/web2.png" alt="" />
+                      <div>
+                        <a
+                          href="https://lexiangmiao.github.io/"
+                          target="_blank"
+                        >
+                          <img src="images/portfolio/corporate-site.png" alt="" />
                           <div className="details">
-                            <h4>乐享喵零售</h4>
-                            <span>乐享喵零售演示系统</span>
+                            <h4>企业官网</h4>
+                            <span>在线演示</span>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div className="lg:col-span-3 md:col-span-6 col-span-12 portfolio-item filter-web">
+                        <a
+                          href="http://retail-gw-sit.santechholdings.cn/"
+                          target="_blank"
+                        >
+                          <img src="images/portfolio/lxm-crm.png" alt="" />
+                          <div className="details">
+                            <h4>乐享喵CRM</h4>
+                            <span>在线演示系统（手机访问须授权）</span>
                           </div>
                         </a>
                       </div>
 
                       <div>
-                        <a href="http://49.235.132.153:18080/">
+                        <a
+                          href="https://github.com/jesshaw/chain-hotel-reservation"
+                          target="_blank"
+                        >
                           <img src="images/portfolio/card1.jpg" alt="" />
                           <div className="details">
                             <h4>乐享喵连锁酒店</h4>
                             <span>乐享喵连锁酒店演示系统</span>
-                          </div>
-                        </a>
-                      </div>
-
-                      <div>
-                        <a href="https://org.modao.cc/app/8765c832d43cecb58b22fdbefdbdf8358f25a97e?simulator_type=device&amp;sticky=#screen=sk8sjxl7nrly9vg">
-                          <img src="images/portfolio/card2.jpg" alt="" />
-                          <div className="details">
-                            <h4>天力拍卖</h4>
-                            <span>天力APP在线演示</span>
-                          </div>
-                        </a>
-                      </div>
-
-                      <div className="lg:col-span-3 md:col-span-6 col-span-12 portfolio-item filter-web">
-                        <a href="https://github.com/jesshaw/reservation_room_app">
-                          <img src="images/portfolio/web3.jpg" alt="" />
-                          <div className="details">
-                            <h4>垂直连锁酒店APP</h4>
-                            <span>垂直连锁酒店APP在线演示简单版</span>
                           </div>
                         </a>
                       </div>
@@ -433,7 +438,7 @@ function App() {
                         </a>
                       </div>
 
-                      <div>
+                      {/* <div>
                         <a href="">
                           <img src="images/portfolio/logo1.jpg" alt="" />
                           <div className="details">
@@ -471,7 +476,7 @@ function App() {
                             <span>Alored dono par</span>
                           </div>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                   </TabPanel>
                 </TabView>
