@@ -302,7 +302,7 @@ function App() {
                       </div>
 
                       <div className="portfolio-item filter-web col-span-12 md:col-span-6 lg:col-span-3">
-                        <a href="http://retail-gw-sit.santechholdings.cn/" target="_blank">
+                        <a href="http://139.196.242.18:8088/" target="_blank">
                           <img src="images/portfolio/lxm-crm.png" alt="" />
                           <div className="details">
                             <h4>乐享喵CRM</h4>
