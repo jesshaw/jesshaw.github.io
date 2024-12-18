@@ -23,6 +23,9 @@ function App() {
     {
       label: '首页',
       icon: 'pi pi-home',
+      command: () => {
+        scrollToTarget('home');
+      },
     },
     {
       label: '服务与解决方案',
@@ -79,7 +82,7 @@ function App() {
               },
             },
             {
-              label: '乐享喵CRM',
+              label: '乐香喵CRM',
               icon: 'pi pi-palette',
               command: () => {
                 scrollToTarget('cases');
@@ -116,7 +119,7 @@ function App() {
     <div className="brand-icon">
       <a className="cursor-pointer" onClick={e => scrollToTarget('root')}>
         <Logo />
-        <span>乐享喵</span>
+        <span>乐香喵</span>
       </a>
     </div>
   );
@@ -142,6 +145,13 @@ function App() {
         setIsVisible(true);
       } else {
         setIsVisible(false);
+      }
+
+      const navbar = document.getElementById('header');
+      if (scrollY > 72) {
+        navbar?.classList.add('header-bg');
+      } else {
+        navbar?.classList.remove('header-bg');
       }
     };
 
@@ -189,7 +199,9 @@ function App() {
                 <Button outlined className="w-48" label="继续了解" onClick={() => scrollToTarget('services')} />
               </div>
               <div>
-                <img className="h-full w-full animate-fade-in-right" src="./images/dashboard-light.png" />
+                <a href="http://139.196.242.18:8088/" target="new" title="在线演示，账号和密码均为admin">
+                  <img className="h-full w-full animate-fade-in-right" src="./images/dashboard-light.png" />
+                </a>
               </div>
             </div>
             <div id="services">
@@ -305,8 +317,8 @@ function App() {
                         <a href="http://139.196.242.18:8088/" target="_blank">
                           <img src="images/portfolio/lxm-crm.png" alt="" />
                           <div className="details">
-                            <h4>乐享喵CRM</h4>
-                            <span>在线演示系统（手机访问须授权）</span>
+                            <h4>乐香喵CRM</h4>
+                            <span>在线演示系统（账号密码均为admin）</span>
                           </div>
                         </a>
                       </div>
@@ -315,8 +327,8 @@ function App() {
                         <a href="https://github.com/jesshaw/chain-hotel-reservation" target="_blank">
                           <img src="images/portfolio/card1.jpg" alt="" />
                           <div className="details">
-                            <h4>乐享喵连锁酒店</h4>
-                            <span>乐享喵连锁酒店演示系统</span>
+                            <h4>乐香喵连锁酒店</h4>
+                            <span>乐香喵连锁酒店演示系统</span>
                           </div>
                         </a>
                       </div>
@@ -393,7 +405,7 @@ function App() {
               <div>
                 <span className="text-900 block text-4xl font-bold">关于我们</span>
                 <span className="text-700 block text-lg">
-                  我们拥有10年以上软件研发与设计经验，致力于为客户提供专业、易用、适合的企业软件。
+                  欢迎来到乐香喵信息科技有限公司！作为一家新型软件科技公司，我们立足于创新与技术的交汇点，专注于提供智能化、自动化的数字解决方案，致力于利用人工智能技术推动未来。欢迎与我们合作！
                 </span>
                 <ul className="flex list-none flex-wrap gap-5 p-0">
                   <li className="align-items-center flex">
@@ -410,17 +422,27 @@ function App() {
                   </li>
                 </ul>
                 <ul className="flex list-none flex-col flex-wrap gap-5 p-0">
-                  <li className="align-items-center flex">
+                  <li className="align-items-center flex items-center">
                     <i className="pi pi-map-marker text-green-400"></i>
-                    <span className="text-900 ml-5">上海市嘉定区秋竹路801弄, 201508</span>
+                    <span className="text-900 ml-9">上海市金山区亭卫公路1000号一层（湾区科创中心）</span>
                   </li>
-                  <li className="align-items-center flex">
+                  <li className="align-items-center flex items-center">
                     <i className="pi pi-envelope text-green-400"></i>
-                    <span className="text-900 ml-5">jesshaw@126.com</span>
+                    <span className="text-900 ml-5">
+                      <Button
+                        link
+                        label="jesshaw@126.com"
+                        onClick={() =>
+                          (window.location.href = 'mailto:jesshaw@126.com?subject=软件咨询&body=您好，我想咨询CRM软件相关内容')
+                        }
+                      />
+                    </span>
                   </li>
-                  <li className="align-items-center flex">
+                  <li className="align-items-center flex items-center">
                     <i className="pi pi-phone text-green-400"></i>
-                    <span className="text-900 ml-5">+86 13816820302 （微信可添加）</span>
+                    <span className="text-900 ml-5">
+                      <Button link label="+86 13816820302 （微信可添加）" onClick={() => (window.location.href = 'tel:+8613816820302')} />
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -432,7 +454,7 @@ function App() {
               <div className="brand-icon mt-4 md:mt-0">
                 <a className="mt-6 cursor-pointer" onClick={e => scrollToTarget('root')}>
                   <Logo />
-                  <span>乐享喵</span>
+                  <span>乐香喵</span>
                 </a>
               </div>
               <div>
