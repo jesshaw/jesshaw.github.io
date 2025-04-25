@@ -199,7 +199,7 @@ function App() {
                 <Button outlined className="w-48" label="继续了解" onClick={() => scrollToTarget('services')} />
               </div>
               <div>
-                <a href="http://139.196.242.18:8088/" target="new" title="在线演示，账号和密码均为admin">
+                <a href="http://crm.lexiangmiao.top" target="new" title="在线演示，账号和密码均为admin">
                   <img className="h-full w-full animate-fade-in-right" src="./images/dashboard-light.png" />
                 </a>
               </div>
