@@ -33,7 +33,7 @@ jobs:
 
       # Step 5: 创建 CNAME 文件
       - name: Create CNAME file
-        run: echo "lexiangmiao.com" > ./dist/CNAME
+        run: echo "docs.lexiangmiao.com" > ./dist/CNAME
 
       # Step 6: 列出构建输出目录内容，确保构建正确
       - name: List build directory
